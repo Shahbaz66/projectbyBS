@@ -1,0 +1,7 @@
+.input-form {
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+}
