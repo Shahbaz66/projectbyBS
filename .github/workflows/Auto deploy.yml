@@ -23,7 +23,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: installing node
-        run: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2-beta
         with: 
           node-version: 12  
 
@@ -31,7 +31,7 @@ jobs:
       - name: installing surge
         run: npm install -global surge
         
-        name: deploying using surge
-        run: surge ./ projectbybs.surge.sh/ --token {{ secret.SURGE_TOKEN}}
+      - name: deploying using surge
+        run: surge ./ projectbybs.surge.sh/ --token {{ secret.SURGE_TOKEN }}
           echo Add other actions to build,
           echo test, and deploy your project.
